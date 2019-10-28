@@ -1,3 +1,6 @@
 fn main() {
-    println!("Hello, world!");
+    let s: String = String::from("Hello");
+    let str: String = s.clone();
+
+    println!("s = {}, str = {}", s, str);
 }
