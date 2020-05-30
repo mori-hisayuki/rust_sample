@@ -1,0 +1,15 @@
+[package]
+name = "workspace"
+version = "0.1.0"
+authors = ["mori-hisayuki"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+catflap = "1.1.0"
+cargo-watch = "7.3.0"
+wasm-pack = "0.9.1"
+cargo-generate = "0.5.0"
+
+[build-dependencies]

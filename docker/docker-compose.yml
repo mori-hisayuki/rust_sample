@@ -1,0 +1,28 @@
+version: '3.2'
+
+services:
+  rust:
+    build:
+      context: .
+      dockerfile: ./rust/Dockerfile
+      args:
+        UID: $UID
+        GID: $GID
+        UNAME: $UNAME
+    environment:
+      - TZ=JST-9
+    tty: true
+    working_dir: /home/$UNAME
+    volumes:
+      - type: bind
+        source: ../
+        target: /home/$UNAME
+    networks:
+      - rustnet
+    ports:
+      - 8000:8000
+      - 8080:8080
+
+networks:
+  rustnet:
+    external: true
